@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "challenges"
+    "challenges",
     "theme",
     "tailwind",
     'django.contrib.admin',
