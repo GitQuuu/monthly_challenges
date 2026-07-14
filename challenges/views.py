@@ -17,6 +17,7 @@ monthly_challenges = {
     "december": "Make webapi",
 }
 
+
 # Create your views here.
 
 def index(request):
@@ -26,7 +27,6 @@ def index(request):
     for month in months:
         month_path = reverse("month-challenge", args=[month])
         list_items += f"<li><a href='{month_path}'>{month.capitalize()}</a></li>"
-
     response_data = f"<ul>{list_items}</ul>"
     return HttpResponse(response_data)
 
