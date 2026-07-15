@@ -4,18 +4,18 @@ from django.urls import reverse
 
 
 monthly_challenges = {
-    "january": "Start learning python",
-    "february": "And Django",
-    "march": "Make webapi",
-    "april": "Integrate frontend",
-    "may": "Learn more about Django",
-    "june": "for webapi",
-    "july": "Make webapi",
-    "august": "Make webapi",
-    "september": "forwebapi",
-    "october": "Make webapi",
-    "november": "Make webapi",
-    "december": "Make webapi",
+    "January": "Start learning python",
+    "February": "And Django",
+    "March": "Make webapi",
+    "April": "Integrate frontend",
+    "May": "Learn more about Django",
+    "June": "for webapi",
+    "July": "Make webapi",
+    "August": "We miss .Net",
+    "September": "And Angular",
+    "October": "But we can do it",
+    "November": "Python has a bit og resembling to the vsa pattern",
+    "December": "Make webapi",
 }
 
 
@@ -34,7 +34,11 @@ def index(request):
 
 def monthly_challenge(request, month):
     try:
-        return render(request,"challenges/challenge.html")
+        challenge_text = monthly_challenges[month]
+        return render(request, "challenges/challenge.html", {
+            "text": month,
+            "value": challenge_text
+        })
     except:
         return HttpResponseNotFound("<h1>This month is not supported!</h1>")
 
