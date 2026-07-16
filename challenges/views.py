@@ -15,7 +15,7 @@ monthly_challenges = {
     "september": "And Angular",
     "october": "But we can do it",
     "november": "Python has a bit og resembling to the vsa pattern",
-    "december": "Make webapi",
+    "december": None,
 }
 
 
