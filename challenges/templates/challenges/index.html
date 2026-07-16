@@ -1,15 +1,15 @@
 ﻿{% extends 'layout.html' %}
 
-    {% block page_title %}
-    <title>All Challenges</title>
-    {% endblock %}
+{% block page_title %}
+<title>All Challenges</title>
+{% endblock %}
 
-    {% block content %}
-        <ul>
-            {% for month in months %}
-            <li><a href="{% url 'month-challenge' month %}">{{month | title}}</a></li>
-            {% endfor %}
-        </ul>
-    {% endblock %}
+{% block content %}
+<ul>
+    {% for month in months %}
+    <li><a href="{% url 'month-challenge' month %}">{{month | title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
 
 
